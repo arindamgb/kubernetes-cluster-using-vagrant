@@ -39,12 +39,12 @@ cat /proc/cpuinfo | egrep "vmx|svm"
 apt-get install -y git
 ```
 
-## Get you system ready
-* Download the repo
+## Get your system ready
+* Clone the repository
 ```
 git clone https://github.com/arindamgb/kubernetes-cluster-using-vagrant.git
 ```
-* Install virtualbox and Vagrant
+* Install Virtualbox and Vagrant
 ```
 cd kubernetes-cluster-using-vagrant
 sh install-prerequisites.sh
@@ -82,12 +82,15 @@ _Kubernetes Cluster with 1 master and 2 worker is up and running_
 
 
 ## Shutdown/Delete the Cluster
-* Run below command to Shutdown the Cluster
+* Run below command as `root` to Shutdown the Cluster
 ```
 vagrant halt
 ```
-* Run below command to Delete the cluster permanently
+* Run below command as `root` to Delete the cluster permanently
 ```
 vagrant destroy
 ```
 
+## For more references
+* Kubernetes Website: [kubernetes.io](https://kubernetes.io/).
+* My LinkedIn Profile: [Arindam Gustavo Biswas](https://www.linkedin.com/in/arindamgb/).
