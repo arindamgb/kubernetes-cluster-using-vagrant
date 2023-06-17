@@ -1,6 +1,6 @@
 # Easily provision and set up a Kubernetes cluster using Vagrant for local development and testing
 
-## Why this repository?
+## Purpose of this repository?
 
 This repository provides a comprehensive solution for setting up a Kubernetes cluster using Vagrant. It simplifies the process of provisioning a multi-node Kubernetes environment on your local machine, allowing you to quickly spin up a development or testing cluster.
 
