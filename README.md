@@ -20,7 +20,7 @@ With the included Vagrant configuration files and provisioning scripts, you can 
 
 | Technology  | Version |
 | ------------- |:-------------:|
-| Ubintu     |  22.04.2 LTS (Jammy Jellyfish)   |
+| Ubuntu     |  22.04.2 LTS (Jammy Jellyfish)   |
 | VitualBox     | 6.1.38    |
 | Vagrant     | 2.2.19    |
 | Kubernetes      | v1.27.3     |
