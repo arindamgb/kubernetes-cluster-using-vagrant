@@ -20,11 +20,12 @@ With the included Vagrant configuration files and provisioning scripts, you can 
 
 | Technology  | Version |
 | ------------- |:-------------:|
-| Ubuntu OS      | 22.04.2 LTS (Jammy Jellyfish)   |
+| Ubintu     |  22.04.2 LTS (Jammy Jellyfish)   |
 | VitualBox     | 6.1.38    |
 | Vagrant     | 2.2.19    |
 | Kubernetes      | v1.27.3     |
-| Calico CNI   | v3.25.0     |
+| Containerd (CRI)  |  1.6.21     |
+| Calico (CNI)  |  v3.25.0     |
 
 
 ## Prerequisites
