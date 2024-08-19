@@ -15,7 +15,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 
 # Deploy calico network
 echo "[TASK 3] Deploy Calico network"
-kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.0/manifests/calico.yaml
 
 # Generate Cluster join command
 echo "[TASK 4] Generate and save cluster join command to /joincluster.sh"

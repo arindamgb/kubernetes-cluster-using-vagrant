@@ -38,8 +38,10 @@ export DEBIAN_FRONTEND=noninteractive
 rm -rf /etc/apt/apt.conf.d/70debconf
 apt-get update -y
 apt-get install -y apt-transport-https ca-certificates curl
-curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg
-echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+#curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+#echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 apt-get update -y
 apt-get install -y kubelet kubeadm kubectl
 apt-mark hold kubelet kubeadm kubectl
@@ -58,9 +60,10 @@ rm -rf /etc/containerd
 mkdir /etc/containerd
 containerd config default > /etc/containerd/config.toml
 sed -i 's/            SystemdCgroup = false/            SystemdCgroup = true/' /etc/containerd/config.toml
-sed -i 's/registry\.k8s\.io\/pause:3\.6/registry.k8s.io\/pause:3.9/g' /etc/containerd/config.toml
+#sed -i 's/registry\.k8s\.io\/pause:3\.6/registry.k8s.io\/pause:3.9/g' /etc/containerd/config.toml
 systemctl enable containerd >/dev/null 2>&1
 systemctl restart containerd >/dev/null 2>&1
+apt-mark hold containerd
 
 # Start and Enable kubelet service
 echo "[TASK 6] Enable and start kubelet service"
