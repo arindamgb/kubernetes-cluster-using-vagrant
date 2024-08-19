@@ -60,7 +60,7 @@ rm -rf /etc/containerd
 mkdir /etc/containerd
 containerd config default > /etc/containerd/config.toml
 sed -i 's/            SystemdCgroup = false/            SystemdCgroup = true/' /etc/containerd/config.toml
-#sed -i 's/registry\.k8s\.io\/pause:3\.6/registry.k8s.io\/pause:3.9/g' /etc/containerd/config.toml
+sed -i 's/registry\.k8s\.io\/pause:3\.8/registry.k8s.io\/pause:3.10/g' /etc/containerd/config.toml
 systemctl enable containerd >/dev/null 2>&1
 systemctl restart containerd >/dev/null 2>&1
 apt-mark hold containerd
@@ -80,5 +80,5 @@ echo "[TASK 8] Set root password"
 echo -e "kubeadmin\nkubeadmin" | passwd root
 #echo "kubeadmin" | passwd --stdin root >/dev/null 2>&1
 
-# Update all uesrs bashrc file
+# Update all users bashrc file
 echo "export TERM=xterm" >> /etc/bashrc
