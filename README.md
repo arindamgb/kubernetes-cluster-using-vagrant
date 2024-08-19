@@ -2,6 +2,8 @@
 
 # Easily provision and set up a Kubernetes cluster using Vagrant for local development and testing
 
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)![Vagrant](https://img.shields.io/badge/vagrant-%231563FF.svg?style=for-the-badge&logo=vagrant&logoColor=white)![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
 ## Purpose of this repository
 
 This repository provides a comprehensive solution for setting up a Kubernetes cluster using Vagrant. It simplifies the process of provisioning a multi-node Kubernetes environment on your local machine, allowing you to quickly spin up a development or testing cluster.
