@@ -1,8 +1,4 @@
----
-
-**Last updated on:** August 19, 2024
-
----
+> **Last updated on:** August 19, 2024
 
 # Easily provision and set up a Kubernetes cluster using Vagrant for local development and testing
 
